@@ -1,0 +1,6 @@
+framework module Pods_SnapCarouselDemo {
+  umbrella header "Pods-SnapCarouselDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}
