@@ -20,6 +20,7 @@ class CarouselCollectionDataSource:NSObject,UICollectionViewDataSource,UICollect
     var item:[Any]?
     var clcView:UICollectionView?
 
+    var cellConfig:ConfigRow?
     var selected:rowSelected?
     
     
@@ -30,27 +31,33 @@ class CarouselCollectionDataSource:NSObject,UICollectionViewDataSource,UICollect
         self.height = height
         self.item = item
         self.clcView = clcView
+        setupLayout()
         self.clcView?.delegate = self
         self.clcView?.dataSource = self
+        self.clcView?.reloadData()
         
-        setupLayout()
+        
     }
     
     fileprivate func setupLayout() {
         let layout = self.clcView?.collectionViewLayout as! UPCarouselFlowLayout
         layout.itemSize = CGSize(width:width ?? layout.itemSize.width, height: height ?? layout.itemSize.height)
+        print(layout.itemSize)
         layout.spacingMode = UPCarouselFlowLayoutSpacingMode.overlap(visibleOffset: 30)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return item?.count ?? 0
+        return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = clcView?.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) else { return UICollectionViewCell() }
-        
+        if let configCell = cellConfig{
+            
+           // configCell(cell)
+        }
         return cell
         
     }
@@ -62,5 +69,9 @@ class CarouselCollectionDataSource:NSObject,UICollectionViewDataSource,UICollect
             selected(indexPath)
         }
     }
+    
+    
+    
+    
 
 }

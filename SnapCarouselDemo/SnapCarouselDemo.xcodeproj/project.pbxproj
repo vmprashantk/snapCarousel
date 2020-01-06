@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3CE9B16CC1EC654623907EF6 /* Pods_SnapCarouselDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0027E0AF8B6091A970EC0B2 /* Pods_SnapCarouselDemo.framework */; };
+		8F166DAE23C0D6170094936E /* CustomTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166DAD23C0D6170094936E /* CustomTblCell.swift */; };
+		8F166DB023C0DB020094936E /* CustomTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F166DAF23C0DB020094936E /* CustomTableDataSource.swift */; };
 		8F768EFE23BE53460021134F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F768EFD23BE53460021134F /* AppDelegate.swift */; };
 		8F768F0023BE53460021134F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F768EFF23BE53460021134F /* SceneDelegate.swift */; };
 		8F768F0223BE53460021134F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F768F0123BE53460021134F /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		47A5364D5ADC21A6C445C9A8 /* Pods-SnapCarouselDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapCarouselDemo.release.xcconfig"; path = "Target Support Files/Pods-SnapCarouselDemo/Pods-SnapCarouselDemo.release.xcconfig"; sourceTree = "<group>"; };
+		8F166DAD23C0D6170094936E /* CustomTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTblCell.swift; sourceTree = "<group>"; };
+		8F166DAF23C0DB020094936E /* CustomTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableDataSource.swift; sourceTree = "<group>"; };
 		8F768EFA23BE53460021134F /* SnapCarouselDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapCarouselDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F768EFD23BE53460021134F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F768EFF23BE53460021134F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				8F768EFD23BE53460021134F /* AppDelegate.swift */,
 				8F768EFF23BE53460021134F /* SceneDelegate.swift */,
 				8F768F0123BE53460021134F /* ViewController.swift */,
+				8F166DAD23C0D6170094936E /* CustomTblCell.swift */,
+				8F166DAF23C0DB020094936E /* CustomTableDataSource.swift */,
 				8F768F1523BE58A70021134F /* CarouselCollectionDataSource.swift */,
 				8F768F1123BE542A0021134F /* CustomCell.swift */,
 				8F768F1223BE542A0021134F /* CustomCell.xib */,
@@ -218,7 +224,9 @@
 			files = (
 				8F768F0223BE53460021134F /* ViewController.swift in Sources */,
 				8F768EFE23BE53460021134F /* AppDelegate.swift in Sources */,
+				8F166DB023C0DB020094936E /* CustomTableDataSource.swift in Sources */,
 				8F768F1323BE542A0021134F /* CustomCell.swift in Sources */,
+				8F166DAE23C0D6170094936E /* CustomTblCell.swift in Sources */,
 				8F768F1623BE58A70021134F /* CarouselCollectionDataSource.swift in Sources */,
 				8F768F0023BE53460021134F /* SceneDelegate.swift in Sources */,
 			);
@@ -366,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3GKTYRF8;
 				INFOPLIST_FILE = SnapCarouselDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +394,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3H3GKTYRF8;
 				INFOPLIST_FILE = SnapCarouselDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

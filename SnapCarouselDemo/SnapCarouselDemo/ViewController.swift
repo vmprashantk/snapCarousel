@@ -11,18 +11,36 @@ import UPCarouselFlowLayout
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var clcView: UICollectionView!
     
     var clcDataSource:CarouselCollectionDataSource!
+    var tblDataSourc:CustomTableDataSource!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        clcView.register(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
+    
+       // clcView.register(UINib(nibName: "CustomCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
         // Do any additional setup after loading the view.
        // setupLayout()
-        configClc()
+       // configClc()
+        configTbl()
     }
     
+    
+    func configTbl(){
+        
+        tblDataSourc = CustomTableDataSource(tblView: tblView, row: 3,height:UIScreen.main.bounds.height * 0.4)
+        
+        tblDataSourc.cofigRow = { (cell) in
+            
+            if let cell = cell as? CustomTblCell{
+                
+               // cell.configClc()
+            }
+            
+            
+        }
+    }
     
     func configClc(){
         
